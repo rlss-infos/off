@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+html {
+    background-color: #111518;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #3d3d3d;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #9e9e9e;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #9e9e9e;
+    color: #3d3d3d;
+  }
+
+  .text_welcome {
+    position: absolute; top: -18px; left: 70px;
+  }
+
+  .home_footer {
+    position:absolute;
+    bottom:0;
+    margin-left: -8px;
+    background-color: #2d2d2d;
+    width: 1093px;
+  }
+
+  .bg_home {
+    background-color: #2d2d2d;
+    margin-left: -8px;
+    height: 45px;
+    margin-top: -8px;
+    margin-right: -8px;
+  }
+
+  .home_global{
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+ 
+
+img {
+  border-radius: 10px;
+}
+
+video {
+  border-radius: 10px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	background: #9e9e9e;
+	border: 2px solid rgb(255, 255, 255);
+	box-shadow: 5px 5px 0 rgb(0, 211, 219),
+		-5px -5px 0 rgb(255, 102, 0),
+		-5px 5px 0 rgb(255, 102, 0),
+		5px -5px 0 rgb(0, 211, 219);
+	transition: 500ms ease-in-out;
+  border-radius: 10px;
+}
+
+button:hover {
+	box-shadow: 20px 5px 0 rgb(0, 211, 219), -20px -5px 0 rgb(255, 102, 0);
+}
+
+button:focus {
+	outline: none;
+}
+
+button {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+footer {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ul {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2d2d2d;
+  height: auto;
+  width: auto;
+  padding-top: 0px;
+  color: #fff;
+}
+
+.rocketpass-home-footer{
+bottom: -250px;
+width: auto;
+}
+
+.rocketpass-footer{
+  bottom: -3400px;
+  width: auto;
+  }
+
+  .reward-footer{
+    bottom: -2000px;
+    width: auto;
+    }
+
+.price-footer{
+  bottom: -150px;
+  width: auto;
+  }
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h4{
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
