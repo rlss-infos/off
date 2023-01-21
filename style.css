@@ -209,3 +209,23 @@ width: auto;
   text-transform: capitalize;
   line-height: 3rem;
 }
+
+
+.btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  cursor: pointer;
+}
+
+
+.icone {
+  width: 50px;
+  z-index: auto;
+}
