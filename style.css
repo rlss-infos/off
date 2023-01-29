@@ -185,6 +185,11 @@ width: auto;
   width: auto;
   }
 
+  .pre-rocketpass-footer{
+    bottom: -2400px;
+    width: auto;
+    }
+
   .reward-footer{
     bottom: -2000px;
     width: auto;
