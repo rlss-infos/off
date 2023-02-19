@@ -176,7 +176,7 @@ footer{
 }
 
 .rocketpass-home-footer{
-bottom: -250px;
+bottom: -400px;
 width: auto;
 }
 
@@ -233,4 +233,31 @@ width: auto;
 .icone {
   width: 50px;
   z-index: auto;
+}
+
+.rp7-footer {
+  bottom: -450px;
+  width: auto;
+}
+
+.token-footer {
+  bottom: -1200px;
+  width: auto;
+}
+
+.toto {
+  display: none;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.container > p {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -9px;
 }
