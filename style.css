@@ -256,8 +256,8 @@ width: auto;
 
 .serveur {
   text-align: left;
-  background: rgb(255,119,2);
-  background: linear-gradient(90deg, rgba(255,119,2,1) 0%, rgba(12,150,249,1) 100%);
+  background: rgb(121,121,121);
+  background: linear-gradient(180deg, rgba(121,121,121,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .image_serveur {
@@ -273,4 +273,27 @@ width: auto;
 
 .button_sbp {
   width: 250px;
+}
+
+.bouton_sbp {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #050505;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.bouton_sbp:hover {
+  transform: translateY(-5px);
+}
+
+.bouton_sbp:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
 }
