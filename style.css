@@ -3,24 +3,32 @@
 html {
     background-color: #111518;
     font-family: 'Ubuntu', sans-serif;
+    background-color: #111518; /* Fond foncé */
+    opacity: 0; /* Le site est initialement transparent */
+    transition: opacity 1s; /* Durée de l'animation de fondu */
 }
 
 #menu__toggle {
     opacity: 0;
+        z-index: 999;
   }
   #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
+    z-index: 999;
   }
   #menu__toggle:checked + .menu__btn > span::before {
     top: 0;
     transform: rotate(0deg);
+    z-index: 999;
   }
   #menu__toggle:checked + .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
+    z-index: 999;
   }
   #menu__toggle:checked ~ .menu__box {
     left: 0 !important;
+    z-index: 999;
   }
   .menu__btn {
     position: fixed;
@@ -29,7 +37,7 @@ html {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 999;
   }
   .menu__btn > span,
   .menu__btn > span::before,
@@ -40,14 +48,17 @@ html {
     height: 2px;
     background-color: white;
     transition-duration: .25s;
+    z-index: 999;
   }
   .menu__btn > span::before {
     content: '';
     top: -8px;
+    z-index: 999;
   }
   .menu__btn > span::after {
     content: '';
     top: 8px;
+    z-index: 999;
   }
   .menu__box {
     display: block;
@@ -62,6 +73,7 @@ html {
     background-color: #3d3d3d;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
     transition-duration: .25s;
+    z-index: 999;
   }
   .menu__item {
     display: block;
@@ -72,10 +84,12 @@ html {
     font-weight: 600;
     text-decoration: none;
     transition-duration: .25s;
+    z-index: 999;
   }
   .menu__item:hover {
     background-color: #9e9e9e;
     color: #3d3d3d;
+    z-index: 999;
   }
 
   .text_welcome {
@@ -217,14 +231,15 @@ width: auto;
   align-items: center;
   position: fixed;
   right: 20px;
-  bottom: 50px;
+  bottom: 120px;
   cursor: pointer;
+  z-index: 999;
 }
 
 
 .icone {
   width: 50px;
-  z-index: auto;
+  z-index: 999;
 }
 
 .rp7-footer {
@@ -296,4 +311,301 @@ width: auto;
 .bouton_sbp:active {
   transform: translateY(0);
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 180px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.fullscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  text-align: center;
+}
+
+.fullscreen-img {
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* Style pour la barre de recherche */
+input[type="text"] {
+  width: 30%;
+  padding: 10px;
+  background-color: #3d3d3d; /* Couleur de fond grise */
+  color: #fff; /* Couleur du texte en blanc */
+  border: none; /* Suppression de la bordure */
+  border-radius: 5px;
+}
+
+
+
+    /* Style pour le conteneur d'images avec flexbox */
+    .image-container {
+      display: flex;
+      flex-wrap: wrap; /* Permet aux images de passer à la ligne suivante si nécessaire */
+      justify-content: center; /* Centre les images horizontalement */
+      align-items: center; /* Centre les images verticalement */
+    }
+
+    /* Style pour chaque image */
+    .image {
+      position: relative;
+      background-color: black;
+      width: 100px;
+      height: 200px;
+      border-radius: 10px;
+      color: white;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .image img {
+      transition: transform 0.2s; /* Ajoute une transition pour une animation fluide */
+    }
+
+    /* Style pour le message d'aucun résultat */
+    .no-result-message {
+      display: none;
+      color: red;
+      animation: blink 1s infinite; /* Ajout de l'animation */
+    }
+
+
+
+        /* Animation de clignotement */
+        @keyframes blink {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+
+
+
+
+    /* Style de la table */
+    table {
+      width: 80%; /* Largeur de la table */
+      margin: 0 auto; /* Centre la table horizontalement */
+      border-collapse: collapse; /* Fusionne les bordures des cellules */
+      border: 2px solid #333; /* Bordure de la table */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère autour de la table */
+    }
+
+    /* Style des cellules d'en-tête */
+    th {
+      background-color: #3d3d3d; /* Couleur de fond */
+      color: #fff; /* Couleur du texte */
+      padding: 10px; /* Espacement intérieur */
+      text-align: left; /* Alignement du texte à gauche */
+    }
+
+    /* Style des cellules de données */
+    td {
+      background-color: #f3f3f3; /* Couleur de fond */
+      color: #333; /* Couleur du texte */
+      padding: 10px; /* Espacement intérieur */
+      text-align: left; /* Alignement du texte à gauche */
+    }
+
+    /* Style pour les images */
+    table img {
+      max-width: 100%; /* Empêche le redimensionnement excessif des images */
+      margin: 0 auto; /* Centre les images horizontalement dans la cellule */
+      display: inline-block;
+    }
+
+
+
+        /* Style pour l'image en plein écran */
+        #fullscreen {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.9);
+          text-align: center;
+        }
+    
+        #fullscreen img {
+          max-width: 90%;
+          max-height: 90%;
+          margin: auto;
+          position: absolute;
+          top: 0; bottom: 0; left: 0; right: 0;
+        }
+
+
+
+    .thumbnails img {
+      margin: 3px;
+    }
+
+    .thumbnails2 {
+      margin: 3px;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.1);
+    }
+
+
+    /* Style pour séparer les différentes cases avec des bordures */
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: auto;
+      font-family: 'Arial';
+      font-weight: bold;
+    }
+
+    td {
+      border: 2px solid #000;
+      padding: 10px;
+      text-align: center;
+      color: black;
+      font-family: 'Arial';
+      font-weight: bold;
+    }
+
+
+    th {
+        border: 2px solid #000;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-family: 'Arial';
+        font-weight: bold;
+    }
+
+
+      /* Style pour aligner le texte et l'image horizontalement dans color-info */
+    .color-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; /* Aligner horizontalement le texte */
+    }
+
+    .color-info span {
+      font-family: 'Arial', sans-serif;
+    }
+
+
+    /* CSS pour l'animation RGB du texte */
+@keyframes rgbTextAnimation {
+  0% {
+    color: red;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: red;
+  }
+}
+
+/* Appliquer l'animation rgb */
+.paint {
+  animation: rgbTextAnimation 2s infinite;
+}
+
+
+/* CSS pour l'animation de jaune sur le texte */
+@keyframes yellowTextAnimation {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgba(243, 239, 0);
+  }
+  100% {
+    color: black;
+  }
+}
+
+/* CSS pour l'animation de violet sur le texte */
+@keyframes bmTextAnimation {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(175, 0, 175);
+  }
+  100% {
+    color: black;
+  }
+}
+
+
+/* CSS pour l'animation de rouge sur le texte */
+@keyframes importéTextAnimation {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(255, 0, 0);
+  }
+  100% {
+    color: black;
+  }
 }
