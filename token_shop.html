@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo_ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="shop.ico" type="image/x-icon">
     <title>RLSS-INFOS</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
       <li><a class="menu__item" href="#" onclick="location.href = 'index.html';"><img src="home.png" alt="" height="20px"> Accueil</a></li>
       		<li><a class="menu__item" href="#" onclick="window.location.href = 'price.html';"><img src="price.webp" alt="" height="20px"> Prix</a></li>
 			<li><a class="menu__item" href="#" onclick="window.location.href='rocketpass.html';"><img src="rocketpass.webp" alt="" height="20px"> Rocket Pass</a></li>
-          <li><a class="menu__item" href="#" onclick="window.location.href='reward.html';"><img src="reward.png" alt="" height="20px"> Récompense</a></li>
+          <li><a class="menu__item" href="#" onclick="window.location.href='reward.html';"><img src="reward.png" alt="" height="20px"> Récompenses</a></li>
       <li><a class="menu__item" href="#" onclick="window.location.href='shop.html';"><img src="shop.png" alt="" height="20px"> Boutique</a></li>
       <li><a class="menu__item" href="#" onclick="window.location.href='leak.html';"><img src="leak.png" alt="" height="20px"> Leaks</a></li>
       <li><a class="menu__item" href="#" onclick="window.location.href='partenaire.html';"><img src="partenaire.png" alt="" height="20px"> Partenaire</a></li>
@@ -42,154 +42,36 @@
 
 <center>
 
-<img src="RLSS_LOGO.png" alt="" height="128px" width="auto"><br>
+<img src="RLSS_LOGO.png" alt="" height="128px" width="auto"><br><br>
 <img src="shop.png" alt="" height="64px" width="auto"><br>
-<br><br>
-
-<script>
-  function ShowAndHide_prélude() {
-      var x = document.getElementById('prélude');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
 
 
+<h2 style="color: white;">Cliquez sur une boite pour voir son contenue :</h2>
 
-
-
-  function ShowAndHide_primé() {
-      var x = document.getElementById('primé');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-
-
-
-  function ShowAndHide_esthétique() {
-      var x = document.getElementById('esthétique');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
+ <div class="gallery">
+    <img src="prélude.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_prélude.mp4')">
+    <img src="primé.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_primé.mp4')">
+    <img src="esthétique.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_esthétique.mp4')">
+    <img src="puissant.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_puissant.mp4')">
+    <img src="runique.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_runique.mp4')">
+    <img src="synthétique.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_synthétique.mp4')">
+    <img src="fiesta.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_fiesta.mp4')">
+    <img src="derby.gif" alt="" class="thumbnail" onclick="displayFullScreen('in_derby.mp4')">
+</div>
+<div class="fullscreen" id="fullscreen">
+    <span class="close-btn" onclick="closeFullScreen()">&times;</span>
+    <video src="" controls class="fullscreen-video" id="fullscreen-video"></video>
+</div>
+<script src="app.js"></script>
 
 
 
 
-  function ShowAndHide_puissant() {
-      var x = document.getElementById('puissant');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-
-
-
-
-
-  function ShowAndHide_runique() {
-      var x = document.getElementById('runique');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-
-
-
-
-  function ShowAndHide_synthétique() {
-      var x = document.getElementById('synthétique');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-
-
-
-
-  function ShowAndHide_fiesta() {
-      var x = document.getElementById('fiesta');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-
-
-
-
-
-  function ShowAndHide_derby() {
-      var x = document.getElementById('derby');
-      if (x.style.display == 'none') {
-          x.style.display = 'block';
-      } else {
-          x.style.display = 'none';
-      }
-  }
-  </script>
-
-<h2 style="color: white;">Veuillez cliquer sur une boite pour voir son contenu.</h2>
-
-<img src="prélude.gif" alt="" height="300px" onclick="ShowAndHide_prélude()";>
-<img src="primé.gif" alt="" height="300px" onclick="ShowAndHide_primé()";>
-<img src="esthétique.gif" alt="" height="300px" onclick="ShowAndHide_esthétique()">
-<img src="puissant.gif" alt="" height="300px" onclick="ShowAndHide_puissant()">
-<img src="runique.gif" alt="" height="300px" onclick="ShowAndHide_runique()">
-<img src="synthétique.gif" alt="" height="300px" onclick="ShowAndHide_synthétique()">
-<img src="fiesta.gif" alt="" height="300px" onclick="ShowAndHide_fiesta()">
-<img src="derby.gif" alt="" height="300px" onclick="ShowAndHide_derby()">
-
-<video controls loop  muted height="300px" width="auto" id="prélude" style="display:none" autoplay>
-  <source src="in_prélude.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-    </video>
-<video controls loop  muted height="300px" width="auto" id="primé" style="display:none" autoplay>
-  <source src="in_primé.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-    </video>
-<video controls loop  muted height="300px" width="auto" id="esthétique" style="display:none" autoplay>
-      <source src="in_esthétique.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-        </video>
-<video controls loop  muted height="300px" width="auto" id="puissant" style="display:none" autoplay>
-          <source src="in_puissant.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-            </video>
-<video controls loop  muted height="300px" width="auto" id="runique" style="display:none" autoplay>
-              <source src="in_runique.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-                </video>
-<video controls loop  muted height="300px" width="auto" id="synthétique" style="display:none" autoplay>
-                  <source src="in_synthétique.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                    </video>
-<video controls loop  muted height="300px" width="auto" id="fiesta" style="display:none" autoplay>
-                      <source src="in_fiesta.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                        </video>
-<video controls loop  muted height="300px" width="auto" id="derby" style="display:none" autoplay>
-                          <source src="in_derby.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                            </video>
-                            
   <footer class="rocketpass-footer">
   <div class=”footer-content”>
     <h4>©RLSS-INFOS 2023 | Tous les éléments de Rocket League Sideswipe appartiennent à Psyonix, Inc.</h4>
+    <h4>Version 1.9</h4>
+    <u><h5 onclick="window.location.href = 'use_condi.html';" style="cursor: pointer;">Conditions d'utilisations</h5></u>
   </div>
 </footer>
 
